@@ -21,7 +21,6 @@ val Typography = Typography(
         TextStyle(
         fontFamily = FontFamily(Font(R.font.tagesschrift_regular,FontWeight.Medium)),
         fontWeight = FontWeight.Medium,
-        fontSize = 16.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),

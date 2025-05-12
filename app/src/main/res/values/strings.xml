@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Vitamins &amp; Minerals Cheatsheet</string>
+
+    <string name="carrot_credits">Image by Felix Mendoza from Pixabay</string>
+
+    <string name="carrot_description">Carrot illustration</string>
+    <string name="vitamin_a_name">Vitamin A</string>
+    <string name="vitamin_a_scientificNames">Retinol, Retinal, Retinoic acid, Carotenoids</string>
+    <string name="vitamin_a_benefits">Keeps your eyes healthy.\nMaintains healthy skin.\nHelps your body fight infections.\nHelps with growth and reproduction.</string>
+    <string name="vitamin_a_sources">orange, yellow or green coloured fruits and vegetables\ngreen leafy vegetables\nmargarine\ndairy products — milk and cheese\nliver\nmeat\nfish and fish oil</string>
+    <string name="vitamin_a_desctiption"><![CDATA[Vitamin A is a fat-soluble vitamin that is stored in the liver.\nThere are two types of vitamin A that are found in the diet.\n-> Preformed vitamin A is found in animal products such as meat, fish, poultry, and dairy foods.\n-> Precursors to vitamin A, also known as provitamin A, are found in plant-based foods such as fruits and vegetables. The most common type of provitamin A is beta-carotene.\nVitamin A is also available in dietary supplements. It most often comes in the form of retinyl acetate or retinyl palmitate (preformed vitamin A), beta-carotene (provitamin A) or a combination of preformed and provitamin A.]]></string>
+
+
 </resources>
