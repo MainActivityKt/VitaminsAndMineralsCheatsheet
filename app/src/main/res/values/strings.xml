@@ -5,10 +5,45 @@
 
     <string name="carrot_description">Carrot illustration</string>
     <string name="vitamin_a_name">Vitamin A</string>
-    <string name="vitamin_a_scientificNames">Retinol, Retinal, Retinoic acid, Carotenoids</string>
+    <string name="vitamin_a_scientific_names">Retinol, Retinal, Retinoic acid, Carotenoids</string>
     <string name="vitamin_a_benefits">Keeps your eyes healthy.\nMaintains healthy skin.\nHelps your body fight infections.\nHelps with growth and reproduction.</string>
     <string name="vitamin_a_sources">orange, yellow or green coloured fruits and vegetables\ngreen leafy vegetables\nmargarine\ndairy products — milk and cheese\nliver\nmeat\nfish and fish oil</string>
-    <string name="vitamin_a_desctiption"><![CDATA[Vitamin A is a fat-soluble vitamin that is stored in the liver.\nThere are two types of vitamin A that are found in the diet.\n-> Preformed vitamin A is found in animal products such as meat, fish, poultry, and dairy foods.\n-> Precursors to vitamin A, also known as provitamin A, are found in plant-based foods such as fruits and vegetables. The most common type of provitamin A is beta-carotene.\nVitamin A is also available in dietary supplements. It most often comes in the form of retinyl acetate or retinyl palmitate (preformed vitamin A), beta-carotene (provitamin A) or a combination of preformed and provitamin A.]]></string>
+    <string name="vitamin_a_description"><![CDATA[Vitamin A is a fat-soluble vitamin that is stored in the liver.\nThere are two types of vitamin A that are found in the diet.\n-> Preformed vitamin A is found in animal products such as meat, fish, poultry, and dairy foods.\n-> Precursors to vitamin A, also known as provitamin A, are found in plant-based foods such as fruits and vegetables. The most common type of provitamin A is beta-carotene.\nVitamin A is also available in dietary supplements. It most often comes in the form of retinyl acetate or retinyl palmitate (preformed vitamin A), beta-carotene (provitamin A) or a combination of preformed and provitamin A.]]></string>
+
+    <string name="seeds_description">Seeds illustration - AI generated</string>
+    <string name="vitamin_b1_name">Vitamin B1</string>
+    <string name="vitamin_b1_scientific_name">Thiamine</string>
+    <string name="vitamin_b1_description">Thiamin(also spelled Thiamine) helps the body\'s cells change carbohydrates into energy. The main role of carbohydrates is to provide energy for the body, especially the brain and nervous system.\nThiamin also plays a role in muscle contraction and conduction of nerve signals.\nThiamin is essential for the metabolism of pyruvate, which is an important molecule in several chemical reactions in the body.</string>
+    <string name="vitamin_b1_benefits">Helps your body break down and release energy from food.\nKeeps your nervous system healthy.</string>
+    <string name="vitamin_b1_sources">Enriched, fortified, and whole grain products such as bread, cereals, rice, pasta, and flour\nWheat germ\nBeef steak and pork\nTrout and bluefin tuna\nEgg\nLegumes and peas\nNuts and seeds</string>
+
+    <string name="dairy_description">Diary products illustration</string>
+    <string name="vitamin_b2_name">Vitamin B2</string>
+    <string name="vitamin_b2_description">Riboflavin is a type of B vitamin. It is water-soluble, which means it is not stored in the body. Water-soluble vitamins dissolve in water. Leftover amounts of the vitamin leave the body through the fluid body waste. The body keeps a small reserve of these vitamins. They have to be taken on a regular basis to maintain the reserve.\nRiboflavin (vitamin B2) works with the other B vitamins. It is important for body growth. It helps in red blood cell production. It also aids in the release of energy from proteins.</string>
+    <string name="vitamin_b2_scientific_name">Riboflavin</string>
+    <string name="vitamin_b2_sources">Dairy products\nEggs\nGreen leafy vegetables\nLean meats\nOrgan meats, such as liver and kidneys\nLegumes\nMilk\nNuts</string>
+    <string name="vitamin_b2_benefits">Keeps your skin, eyes and nervous system healthy.\nHelps your body release energy from food.</string>
+
+    <string name="mushroom_description">Red mushrooms</string>
+    <string name="vitamin_b3_name">Vitamin B3</string>
+    <string name="vitamin_b3_scientific_name">Niacin</string>
+    <string name="vitamin_b3_description">Niacin is a type of B vitamin. It is water-soluble, which means it is not stored in the body. Water-soluble vitamins dissolve in water. Leftover amounts of the vitamin leave the body through the fluid body waste. The body keeps a small reserve of these vitamins. They have to be taken on a regular basis to maintain the reserve.\nNiacin helps the digestive system, skin, and nerves to function. It is also important for changing food to energy.</string>
+    <string name="vitamin_b3_benefits">Helps your body release energy from food.\nKeeps your nervous system and skin healthy.</string>
+    <string name="vitamin_b3_sources">Milk\nEggs\nEnriched breads and cereals\nRice\nFish\nLean meats\nLegumes\nPeanuts\nPoultry</string>
+
+    <string name="avocado_description">Smiley avocado illustration</string>
+    <string name="vitamin_b5_name">Vitamin B5</string>
+    <string name="vitamin_b5_scientific_name">Pantothenic acid</string>
+    <string name="vitamin_b5_description">Pantothenic acid (vitamin B5) is essential for the metabolism of food. It also plays a role in the production of hormones and cholesterol. Pantothenic acid is also a water-soluble vitamin.</string>
+    <string name="vitamin_b5_benefits">Helps your body release energy from food.</string>
+    <string name="vitamin_b5_sources">Animal proteins\nAvocado\nBroccoli, kale, and other vegetables in the cabbage family\nEggs\nLegumes and lentils\nMilk\nMushrooms\nOrgan meats\nPoultry\nWhite and sweet potatoes\nWhole-grain cereals\nYeast</string>
+
+    <string name="banana_description">Smiley banana illustration</string>
+    <string name="vitamin_b6_name">Vitamin B6</string>
+    <string name="vitamin_b6_scientific_name">Pyridoxine</string>
+    <string name="vitamin_b6_description">Vitamin B6 is a water-soluble vitamin. \nLack of vitamin B6 in the body is uncommon. It can occur in people with kidney failure, liver disease, or alcohol dependence.</string>
+    <string name="vitamin_b6_benefits">Make antibodies. Antibodies are needed to fight many viruses, infections, and other diseases.\nMaintain normal nerve function.\nMakes hemoglobin. Hemoglobin carries oxygen in the red blood cells to the tissues. A vitamin B6 deficiency can cause a form of anemia.\nBreaks down proteins. The more protein you eat, the more vitamin B6 you need.\nKeeps blood sugar (glucose) in normal ranges.</string>
+    <string name="vitamin_b6_sources">Tuna and salmon\nBanana\nLegumes (dried beans)\nBeef and pork\nNuts\nPoultry\nWhole grains and fortified cereals\nChickpeas</string>
 
 
 </resources>
