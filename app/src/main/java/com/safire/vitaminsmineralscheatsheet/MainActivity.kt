@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -78,7 +79,7 @@ class MainActivity : ComponentActivity() {
 fun VitaminsMineralsApp(modifier: Modifier = Modifier) {
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(12.dp),
-        modifier = Modifier
+        modifier = modifier
             .padding(8.dp)
             .fillMaxHeight()
     ) {
@@ -115,12 +116,13 @@ fun VitaminMineralCard(
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(4.dp),
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
                 Image(
                     painter = painterResource(vitaminMineralItem.image),
-                    contentDescription = stringResource(R.string.carrot_description),
+                    contentDescription = stringResource(vitaminMineralItem.imageDescription),
                     Modifier
                         .clip(CircleShape)
                         .size(100.dp)
@@ -132,12 +134,11 @@ fun VitaminMineralCard(
                         style = MaterialTheme.typography.titleMedium,
                         fontSize = 17.sp,
                         lineHeight = 18.sp,
-                        color = Color.DarkGray
+                        color = if (isSystemInDarkTheme()) Color.LightGray else Color.DarkGray
                     )
                     Text(
                         text = stringResource(vitaminMineralItem.name),
                         style = MaterialTheme.typography.titleMedium,
-
                         fontSize = 26.sp
                     )
                 }
@@ -148,12 +149,7 @@ fun VitaminMineralCard(
             Spacer(modifier.size(4.dp))
 
             if (expanded) {
-                Text(
-                    "Rich food sources:",
-                    fontWeight = FontWeight.SemiBold,
-
-                    )
-
+                Text("Rich food sources:", fontWeight = FontWeight.SemiBold)
 
                 val paragraphStyle = ParagraphStyle(textIndent = TextIndent(restLine = 12.sp))
                 Text(
@@ -184,12 +180,13 @@ fun VitaminMineralCard(
 
             ExpandCollapseButton(
                 onClick = { expanded = !expanded },
-                text = if (!expanded) "See more" else "see less",
-                icon = if (!expanded) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
-                contentDescription = if (!expanded) "Arrow down" else "Arrow up",
+                text = if (!expanded) "See more" else "See less",
+                icon =
+                    if (!expanded) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
+                contentDescription = if (!expanded) stringResource(R.string.arrow_down)
+                    else stringResource(R.string.arrow_up),
                 modifier = Modifier.fillMaxWidth() //TODO
             )
-
         }
     }
 }
@@ -209,7 +206,6 @@ fun ExpandCollapseButton(
     ) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(4.dp),
-
             ) {
             Icon(imageVector = icon, contentDescription = contentDescription)
             Text(text, fontWeight = FontWeight.SemiBold)

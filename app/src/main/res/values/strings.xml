@@ -3,6 +3,9 @@
 
     <string name="carrot_credits">Image by Felix Mendoza from Pixabay</string>
 
+    <string name="arrow_down">Arrow down</string>
+    <string name="arrow_up">Arrow up</string>
+
     <string name="carrot_description">Carrot illustration</string>
     <string name="vitamin_a_name">Vitamin A</string>
     <string name="vitamin_a_scientific_names">Retinol, Retinal, Retinoic acid, Carotenoids</string>
@@ -44,6 +47,34 @@
     <string name="vitamin_b6_description">Vitamin B6 is a water-soluble vitamin. \nLack of vitamin B6 in the body is uncommon. It can occur in people with kidney failure, liver disease, or alcohol dependence.</string>
     <string name="vitamin_b6_benefits">Make antibodies. Antibodies are needed to fight many viruses, infections, and other diseases.\nMaintain normal nerve function.\nMakes hemoglobin. Hemoglobin carries oxygen in the red blood cells to the tissues. A vitamin B6 deficiency can cause a form of anemia.\nBreaks down proteins. The more protein you eat, the more vitamin B6 you need.\nKeeps blood sugar (glucose) in normal ranges.</string>
     <string name="vitamin_b6_sources">Tuna and salmon\nBanana\nLegumes (dried beans)\nBeef and pork\nNuts\nPoultry\nWhole grains and fortified cereals\nChickpeas</string>
+
+    <string name="egg_description">Cracked egg illustration</string>
+    <string name="vitamin_b7_name">Vitamin B7</string>
+    <string name="vitamin_b7_scientific_name">Biotin</string>
+    <string name="vitamin_b7_description">Biotin (B7) is needed for energy metabolism, fat synthesis, amino acid metabolism and glycogen synthesis. High biotin intake can contribute to raised blood cholesterol levels.</string>
+    <string name="vitamin_b7_benefits">Help your nervous system function.\nHelps your body make fatty acids.</string>
+    <string name="vitamin_b7_sources">Cereal\nChocolate\nEgg yolk\nLegumes\nMilk\nNuts\nOrgan meats (liver, kidney)\nPork\nYeast</string>
+
+    <string name="broccoli_description">Broccoli illustration</string>
+    <string name="vitamin_b9_name">Vitamin B9</string>
+    <string name="vitamin_b9_scientific_name">Folate, Folic Acid</string>
+    <string name="vitamin_b9_description">Folic acid and folate are both terms for a type of B vitamin (vitamin B9).\nFolate is a B vitamin that occurs naturally in foods such as green leafy vegetables, citrus fruit, and beans.\nFolic acid is man-made (synthetic) folate. It is found in supplements and added to fortified foods.\nThe terms folic acid and folate are often used interchangeably.\nVitamin B9 is also water-soluble.</string>
+    <string name="vitamin_b9_benefits">Helps tissues grow and cells work\nWorks with vitamin B12 and vitamin C to help the body break down, use, and create new proteins\nHelps form red blood cells (helps prevent anemia)\nHelps produce DNA, the building block of the human body, which carries genetic information</string>
+    <string name="vitamin_b9_sources">fortified breads and cereals\nliver\nlegumes — chickpeas and kidney beans\ngreen leafy vegetables\npeas\nbroccoli\nbrussels sprouts\nasparagus</string>
+
+    <string name="meat_description">Meat</string>
+    <string name="vitamin_b12_name">Vitamin B12</string>
+    <string name="vitamin_b12_scientific_name">Cobalamin, Cyanocobalamin</string>
+    <string name="vitamin_b12_description">Vitamin B12, like the other B vitamins, is important for protein metabolism. It helps in the formation of red blood cells and in the maintenance of the nervous system. It is also a water-soluble vitamin.\n</string>
+    <string name="vitamin_b12_benefits">Helps make red blood cells and keeps your nervous system healthy.\nHelps release energy from food.\nHelps your body to use folate.</string>
+    <string name="vitamin_b12_sources">meat\nfish\neggs\nmilk\ncheese\nsome fortified cereals and fortified plant-based milks</string>
+
+    <string name="lemons_description">Lemons with their leaf illustration</string>
+    <string name="vitamin_c_name">Vitamin C</string>
+    <string name="vitamin_c_scientific_name">Ascorbic acid</string>
+    <string name="vitamin_c_description">Vitamin C is a water-soluble vitamin. It is needed for normal growth and development.\nVitamin C is one of many antioxidants. Antioxidants are nutrients that block some of the damage caused by free radicals.\nFree radicals are made when your body breaks down food or when you are exposed to tobacco smoke or radiation.\nThe buildup of free radicals over time is largely responsible for the aging process.\nFree radicals may play a role in cancer, heart disease, and conditions like arthritis.\nThe body is not able to make vitamin C on its own. It does not store vitamin C. It is therefore important to include plenty of vitamin C-containing foods in your daily diet.\nAll fruits and vegetables contain some amount of vitamin C.</string>
+    <string name="vitamin_c_benefits">Antioxidant.\nKeeps your skin, bones, blood vessels and connective tissue healthy.\nHelps with wound healing.\nBoosts your immune system.\nHelps your body absorb iron.</string>
+    <string name="vitamin_c_sources">citrus fruits\nkiwi fruit\nstrawberries\ntomatoes\ncabbage\ncauliflower\nbrussels sprouts\ncapsicum\npotatoes</string>
 
 
 </resources>
