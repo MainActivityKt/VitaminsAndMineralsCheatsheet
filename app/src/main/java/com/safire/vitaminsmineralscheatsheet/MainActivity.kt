@@ -9,7 +9,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -17,12 +16,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.CardDefaults
@@ -30,7 +27,6 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -54,6 +50,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.safire.vitaminsmineralscheatsheet.model.DataSource
+import com.safire.vitaminsmineralscheatsheet.model.VitaminItem
 import com.safire.vitaminsmineralscheatsheet.model.VitaminMineralItem
 import com.safire.vitaminsmineralscheatsheet.ui.theme.VitaminsMineralsCheatsheetTheme
 
@@ -84,15 +81,15 @@ fun VitaminsMineralsApp(modifier: Modifier = Modifier) {
             .fillMaxHeight()
     ) {
         items(items = DataSource.data) {
-            VitaminMineralCard(it)
+            VitaminItemCard(it as VitaminItem)
         }
     }
 }
 
 
 @Composable
-fun VitaminMineralCard(
-    vitaminMineralItem: VitaminMineralItem,
+fun VitaminItemCard(
+    vitaminMineralItem: VitaminItem,
     modifier: Modifier = Modifier
 
 ) {

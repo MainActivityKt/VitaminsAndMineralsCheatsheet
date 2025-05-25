@@ -76,5 +76,26 @@
     <string name="vitamin_c_benefits">Antioxidant.\nKeeps your skin, bones, blood vessels and connective tissue healthy.\nHelps with wound healing.\nBoosts your immune system.\nHelps your body absorb iron.</string>
     <string name="vitamin_c_sources">citrus fruits\nkiwi fruit\nstrawberries\ntomatoes\ncabbage\ncauliflower\nbrussels sprouts\ncapsicum\npotatoes</string>
 
+    <string name="sun_description">Smiling sun illustration</string>
+    <string name="vitamin_d_name">Vitamin D</string>
+    <string name="vitamin_d_scientific_name">Calciferol, Ergocalciferol, Cholecalciferol</string>
+    <string name="vitamin_d_description">Vitamin D is a fat-soluble vitamin. Fat-soluble vitamins are stored in the body\'s fatty tissue and liver.\nVitamin D comes in 2 forms:\nVitamin D2 (ergocalciferol): comes from plant sources. \nVitamin D3 (cholecalciferol) is made in your skin when you are exposed to sunlight. It\'s also found in some animal foods and supplements.\nVitamin D helps the body absorb calcium. Calcium is a mineral that you must have for normal bone formation.\n\nIf you do not consume enough calcium in your diet, or if your body does not absorb enough calcium due to low vitamin D, bone production and bone tissues may suffer.\n\nVitamin D deficiency can lead to weakened bones (osteoporosis in adults or rickets in children).</string>
+    <string name="vitamin_d_benefits">Needed to use calcium.\nImportant for healthy bones, immune system, skin, muscles and brain.</string>
+    <string name="vitamin_d_sources">vitamin D forms in the skin when it is exposed to the sun\nsalmon, mackerel, herring and sardines\negg yolks\nfortified milk and margarine</string>
+
+    <string name="sunflowers_description">Sunflowers illustration</string>
+    <string name="vitamin_e_name">Vitamin E</string>
+    <string name="vitamin_e_scientific_name">Tocopherol, Alpha-tocopherol</string>
+    <string name="vitamin_e_description">"Vitamin E is a fat-soluble vitamin (dissolves in fat) that is found in several forms. Alpha tocopherol is the form used by your body.\nThe main role of vitamin E is to act as an antioxidant. Some antioxidants protect your cells against free-radicals (unpaired electrons). The best way to get the daily requirement of vitamin E is by eating food sources. "</string>
+    <string name="vitamin_e_benefits">It is an antioxidant. This means it protects body tissue from damage caused by substances called free radicals. Free radicals can harm cells, tissues, and organs. They are believed to play a role in certain conditions related to aging.\nIt helps keep the immune system strong against viruses and bacteria.\nIt helps form red blood cells and widen blood vessels to keep blood from clotting inside them.\nIt helps the body use vitamin K.\nCells also use vitamin E to interact with each other. It helps them carry out many important functions.</string>
+    <string name="vitamin_e_sources">Vegetable oils (such as wheat germ, sunflower, safflower, corn, and soybean oils)\nNuts (such as almonds, peanuts, and hazelnuts/filberts)\nSeeds (such as sunflower seeds)\nGreen leafy vegetables (such as spinach and broccoli)\nFortified breakfast cereals, fruit juices, margarine, and spreads.</string>
+
+    <string name="kale_description">Kale illustration</string>
+    <string name="vitamin_k_name">Vitamin K</string>
+    <string name="vitamin_k_scientific_name">Phylloquinone, Menaquinones, Menadione </string>
+    <string name="vitamin_k_description">Vitamin K is a fat-soluble vitamin, which is known as the clotting vitamin.\nThe body needs vitamin K to make certain proteins in the liver that cause blood to clot. These proteins are called clotting factors.  Without vitamin K, the liver could not produce clotting factors II, VII, IX, and X, and blood would not clot. Some studies suggest that vitamin K helps maintain strong bones in older adults.</string>
+    <string name="vitamin_k_benefits">healthy bones\nblood clotting and wound healing\nprevents a serious bleeding condition called haemorrhagic disease of the newborn (HDN), in newborns</string>
+    <string name="vitamin_k_sources">Green leafy vegetables, such as kale, spinach, turnip greens, collards, Swiss chard, mustard greens, parsley, romaine, and green leaf lettuce\nVegetables such as Brussels sprouts, broccoli, cauliflower, and cabbage\nFish, liver, meat, eggs, and cereals (contain smaller amounts)</string>
+
 
 </resources>

@@ -3,12 +3,11 @@ package com.safire.vitaminsmineralscheatsheet.model
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 
-data class VitaminMineralItem (
-    @DrawableRes val image: Int,
-    @StringRes val imageDescription: Int,
-    @StringRes val name: Int,
-    @StringRes val scientificNames: Int,
-    @StringRes val description: Int,
-    @StringRes val richSources: Int,
-    @StringRes val benefits: Int
+open class VitaminMineralItem (
+    @DrawableRes open val image: Int,
+    @StringRes open val imageDescription: Int,
+    @StringRes open val name: Int,
+    @StringRes open val description: Int,
+    @StringRes open val richSources: Int,
+    @StringRes open val benefits: Int
 )
