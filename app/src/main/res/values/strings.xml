@@ -97,5 +97,45 @@
     <string name="vitamin_k_benefits">healthy bones\nblood clotting and wound healing\nprevents a serious bleeding condition called haemorrhagic disease of the newborn (HDN), in newborns</string>
     <string name="vitamin_k_sources">Green leafy vegetables, such as kale, spinach, turnip greens, collards, Swiss chard, mustard greens, parsley, romaine, and green leaf lettuce\nVegetables such as Brussels sprouts, broccoli, cauliflower, and cabbage\nFish, liver, meat, eggs, and cereals (contain smaller amounts)</string>
 
+    <string name="cheese_description">Cheese illustration</string>
+    <string name="calcium_name">Calcium</string>
+    <string name="calcium_symbol">Ca</string>
+    <string name="calcium_description">Calcium is a mineral that is vital for the healthy functioning of your body. It is especially important for building and maintaining healthy bones throughout your life. Your bones contain 99% of your body’s calcium.\nCalcium is important for strong bones, as well as for the healthy functioning of nerves, muscles and heart. Most people get enough calcium from their diet, although some people may need a supplement.\n\nYou need calcium to build and maintain healthy bones. Calcium combines with other minerals, such as phosphate, to give your bones structure and strength. Calcium also circulates in your blood to be used by your heart, muscles and nerves.\nTo absorb calcium, your body needs vitamin D. Even if you have plenty of calcium in your diet, if you don’t get enough vitamin D, you will have trouble absorbing calcium and keeping your bones healthy.\nThe best way to get enough calcium is to make sure you include high-calcium foods in your diet such as dairy foods. Dairy foods include milk, yoghurt and cheese.</string>
+    <string name="calcium_benefits">builds bones\nmuscle and nerve function\nblood clotting</string>
+    <string name="calcium_sources">milk\ncheese\nyoghurt\ngreen leafy vegetables\nfish where you eat the bones\nlegumes\nfortified breakfast cereals</string>
+
+    <string name="salt_shaker_description">Illustrated salt shaker with salt label written</string>
+    <string name="iodine_name">Iodine</string>
+    <string name="iodine_symbol">I</string>
+    <string name="iodine_description">Iodine is essential to make thyroid hormones. These hormones control your metabolic rate (the rate your body uses energy when it is resting). They also help your brain and body grow and develop.</string>
+    <string name="iodine_benefits">thyroid gland function\nnormal growth</string>
+    <string name="iodine_sources">seafood\nseaweed\nbread\niodised table salt and foods made with this type of salt</string>
+
+    <string name="beans_description">Different colored kidney beans - AI generated</string>
+    <string name="iron_name">Iron</string>
+    <string name="iron_symbol">Fe</string>
+    <string name="iron_description">Iron is a nutrient that comes from your diet. It\'s needed for many functions in your body, with one of the most important being to prevent anaemia. Iron is needed to make haemoglobin, a molecule found in your red blood cells. Haemoglobin moves oxygen through your body.\nWhile your body can store iron, it can\'t make iron. The only way to get iron is by consuming (eating) it.\nThere are 2 types of iron in food:\n\n1-haem iron — this is easily absorbed by the body\n2-non-haem iron — this is harder for your body to absorb\n\nHaem iron can be found in:\nmeat — beef, lamb, pork, and kangaroo\npoultry — chicken, turkey, and eggs\nseafood — salmon, sardines and tuna\norgan meats — liver, kidney and pate\n\nPlant foods containing non-haem iron can give you iron too. If you follow a plant-based diet, you will need to eat about 80% more iron to meet your dietary requirements.</string>
+    <string name="iron_benefits">red blood cell function\nhelps move oxygen around the body</string>
+    <string name="iron_sources">red meats including beef, lamb, kangaroo\nfish\npoultry\nwholegrain cereals\nbeans — kidney beans, edamame beans and chickpeas\nfortified breakfast cereals\ndried fruit</string>
+
+    <string name="spinach_description">Spinach</string>
+    <string name="magnesium_name">Magnesium</string>
+    <string name="magnesium_symbol">Mg</string>
+    <string name="magnesium_description">Magnesium is a mineral that is essential for healthy muscles, nerves, bones and blood sugar levels. If you don\'t get enough magnesium in your diet over a long time, you may be at a higher risk of health problems such as heart attack, stroke, diabetes or osteoporosis.\nMagnesium is needed for many processes in the body such as keeping muscles and nerves to work properly, keeping blood sugar and blood pressure at the right level, and making proteins, bone and DNA (genetic material)</string>
+    <string name="magnesium_benefits">makes energy\nparathyroid gland function</string>
+    <string name="magnesium_sources">legumes\npeas\nbeans\nnuts\nspinach\nwholemeal bread\nmilk</string>
+
+    <string name="tomato_description">Tomato illustration</string>
+    <string name="potassium_name">Potassium</string>
+    <string name="potassium_symbol">K</string>
+    <string name="potassium_description">Potassium is a mineral that is essential for all of the body\'s functions. It helps your nerves, muscles and heart to function well, and also helps move nutrients and waste around your body\'s cells.\n\nPotassium has many important functions:\nIt allows the nerves to respond to stimulation and muscles to contract (tighten), including those in the heart.\nIt reduces the effect of sodium (present in table salt) on blood pressure.\nIt helps move nutrients into cells, and waste products out of cells.\n\nYour kidneys control potassium levels in your body and get rid of excess potassium. If your kidneys do not work properly, potassium may build up in your blood. This can be a very dangerous condition, because it may cause your heart to beat irregularly or stop beating (cardiac arrest).</string>
+    <string name="potassium_benefits">controls the balance of fluids in the body\nhelps your heart muscle work properly\ncontrol blood pressure\nprotect against strokes and cardiovascular disease\nprotect against osteoporosis\nprevent kidney stones</string>
+    <string name="potassium_sources">leafy green vegetables\ntomatoes\ncucumbers\nzucchini\neggplant\npumpkin\nbananas\nbeef\nfish\npoultry\nnuts and seeds</string>
+
+    <string name="zinc_name">Zinc</string>
+    <string name="zinc_symbol">Zn</string>
+    <string name="zinc_description">Zinc is an important mineral involved in various bodily functions – growth and development as well as immune function.\nZinc also helps to produce the active form of vitamin A and transports it around the body.\nZinc is naturally found in cells throughout the body. It helps the cells to grow and divide, and is necessary for the activity of enzymes, proteins, and DNA (your genes). The body cannot make zinc, so you need to get it from the food you eat. It is mainly stored in the muscle and bone.\n\nZinc is important for many of the body\'s functions:\n\nImmune system: The body needs zinc to fight off infection. People who don\'t have enough zinc in their body may be at greater risk of infections. Children and older people are at greater risk.\nWound healing: Zinc supports skin health. If you don\'t have enough zinc in your diet, it can lead to skin changes that can look like eczema at first. Zinc supplements may be used to help people who have burns or leg ulcers that heal very slowly or don\'t heal.\nTaste and smell: Zinc is very important for one of the enzymes you need so that you are able to taste and smell.\n\nHaving enough zinc is especially important during pregnancy, and for children to ensure they grow and develop properly.</string>
+    <string name="zinc_sources">meat\nfish\nshellfish\npoultry\ncereals\ndairy foods\nbread\ncereals</string>
+    <string name="zinc_benefits">\t\nwound healing\nmaking new cells and enzymes\nprocessing carbohydrate, fat and protein in food</string>
 
 </resources>

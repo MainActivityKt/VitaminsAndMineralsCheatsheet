@@ -14,8 +14,10 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -27,6 +29,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -50,13 +53,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.safire.vitaminsmineralscheatsheet.model.DataSource
+import com.safire.vitaminsmineralscheatsheet.model.MineralItem
+import com.safire.vitaminsmineralscheatsheet.model.Solubility
 import com.safire.vitaminsmineralscheatsheet.model.VitaminItem
 import com.safire.vitaminsmineralscheatsheet.model.VitaminMineralItem
 import com.safire.vitaminsmineralscheatsheet.ui.theme.VitaminsMineralsCheatsheetTheme
 
 
 const val BULLET = "\u2022"
-
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,15 +85,15 @@ fun VitaminsMineralsApp(modifier: Modifier = Modifier) {
             .fillMaxHeight()
     ) {
         items(items = DataSource.data) {
-            VitaminItemCard(it as VitaminItem)
+            VitaminMineralCard(it)
         }
     }
 }
 
 
 @Composable
-fun VitaminItemCard(
-    vitaminMineralItem: VitaminItem,
+fun VitaminMineralCard(
+    vitaminMineralItem: VitaminMineralItem,
     modifier: Modifier = Modifier
 
 ) {
@@ -127,7 +131,13 @@ fun VitaminItemCard(
                 Column(
                 ) {
                     Text(
-                        text = stringResource(vitaminMineralItem.scientificNames),
+                        text = stringResource(
+                            if (vitaminMineralItem is VitaminItem) {
+                                vitaminMineralItem.scientificNames
+                            } else {
+                                (vitaminMineralItem as MineralItem).chemicalSymbol
+                            }
+                        ),
                         style = MaterialTheme.typography.titleMedium,
                         fontSize = 17.sp,
                         lineHeight = 18.sp,
@@ -138,6 +148,9 @@ fun VitaminItemCard(
                         style = MaterialTheme.typography.titleMedium,
                         fontSize = 26.sp
                     )
+                    if (vitaminMineralItem is VitaminItem) {
+                        VitaminSolubility(vitaminMineralItem.solubility)
+                    }
                 }
 
             }
@@ -146,33 +159,7 @@ fun VitaminItemCard(
             Spacer(modifier.size(4.dp))
 
             if (expanded) {
-                Text("Rich food sources:", fontWeight = FontWeight.SemiBold)
-
-                val paragraphStyle = ParagraphStyle(textIndent = TextIndent(restLine = 12.sp))
-                Text(
-                    buildAnnotatedString {
-                        sources.forEach {
-                            withStyle(style = paragraphStyle) {
-                                append(BULLET)
-                                append("\t\t")
-                                append(it)
-                            }
-                        }
-                    }
-                )
-                Spacer(modifier.size(4.dp))
-                Text(
-                    buildAnnotatedString {
-                        Text("Health Benefits:", fontWeight = FontWeight.SemiBold)
-                        benefits.forEach {
-                            withStyle(style = paragraphStyle) {
-                                append(BULLET)
-                                append("\t\t")
-                                append(it)
-                            }
-                        }
-                    }
-                )
+                AdditionalInfo(sources, modifier, benefits)
             }
 
             ExpandCollapseButton(
@@ -180,11 +167,62 @@ fun VitaminItemCard(
                 text = if (!expanded) "See more" else "See less",
                 icon =
                     if (!expanded) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
-                contentDescription = if (!expanded) stringResource(R.string.arrow_down)
-                    else stringResource(R.string.arrow_up),
-                modifier = Modifier.fillMaxWidth() //TODO
+                contentDescription = when(expanded) {
+                    true -> stringResource(R.string.arrow_up)
+                    false -> stringResource(R.string.arrow_down)
+                }, modifier = Modifier.fillMaxWidth()
             )
         }
+    }
+}
+
+@Composable
+private fun AdditionalInfo(
+    sources: List<String>,
+    modifier: Modifier,
+    benefits: List<String>
+) {
+    Text("Rich food sources:", fontWeight = FontWeight.SemiBold)
+
+    val paragraphStyle = ParagraphStyle(textIndent = TextIndent(restLine = 12.sp))
+    Text(
+        buildAnnotatedString {
+            sources.forEach {
+                withStyle(style = paragraphStyle) {
+                    append(BULLET)
+                    append("\t\t")
+                    append(it)
+                }
+            }
+        }
+    )
+    Spacer(modifier.size(4.dp))
+    Text(
+        buildAnnotatedString {
+            Text("Health Benefits:", fontWeight = FontWeight.SemiBold)
+            benefits.forEach {
+                withStyle(style = paragraphStyle) {
+                    append(BULLET)
+                    append("\t\t")
+                    append(it)
+                }
+            }
+        }
+    )
+}
+
+@Composable
+private fun VitaminSolubility(solubility: Solubility) {
+    OutlinedCard(
+    ) {
+        Text(
+            modifier = Modifier.padding(8.dp),
+            text = when (solubility) {
+                Solubility.WATER_SOLUBLE -> "Water soluble"
+                Solubility.FAT_SOLUBLE -> "Fat soluble"
+            },
+            fontWeight = FontWeight.W500
+        )
     }
 }
 
@@ -199,16 +237,14 @@ fun ExpandCollapseButton(
     FilledTonalIconButton(
         onClick = onClick,
         modifier = modifier
-
     ) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
+        ) {
             Icon(imageVector = icon, contentDescription = contentDescription)
             Text(text, fontWeight = FontWeight.SemiBold)
         }
     }
-
 }
 
 @Preview(showBackground = true)

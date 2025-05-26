@@ -112,6 +112,54 @@ object DataSource {
             richSources = R.string.vitamin_k_sources,
             benefits = R.string.vitamin_k_benefits,
             solubility = Solubility.FAT_SOLUBLE
+        ), MineralItem (
+            image = R.drawable.cheese,
+            name = R.string.calcium_name,
+            imageDescription = R.string.cheese_description,
+            chemicalSymbol = R.string.calcium_symbol,
+            description = R.string.calcium_description,
+            richSources = R.string.calcium_sources,
+            benefits = R.string.calcium_benefits,
+        ), MineralItem (
+            image = R.drawable.salt_shaker,
+            name = R.string.iodine_name,
+            imageDescription = R.string.salt_shaker_description,
+            chemicalSymbol = R.string.iodine_symbol,
+            description = R.string.iodine_description,
+            richSources = R.string.iodine_sources,
+            benefits = R.string.iodine_benefits,
+        ), MineralItem (
+            image = R.drawable.beans,
+            name = R.string.iron_name,
+            imageDescription = R.string.beans_description,
+            chemicalSymbol = R.string.iron_symbol,
+            description = R.string.iron_description,
+            richSources = R.string.iron_sources,
+            benefits = R.string.iron_benefits,
+        ), MineralItem (
+            image = R.drawable.spinach,
+            name = R.string.magnesium_name,
+            imageDescription = R.string.spinach_description,
+            chemicalSymbol = R.string.magnesium_symbol,
+            description = R.string.magnesium_description,
+            richSources = R.string.magnesium_sources,
+            benefits = R.string.magnesium_benefits,
+        ), MineralItem (
+            image = R.drawable.tomato,
+            name = R.string.potassium_name,
+            imageDescription = R.string.tomato_description,
+            chemicalSymbol = R.string.potassium_symbol,
+            description = R.string.potassium_description,
+            richSources = R.string.potassium_sources,
+            benefits = R.string.potassium_benefits,
+        ), MineralItem (
+            image = R.drawable.meat,
+            name = R.string.zinc_name,
+            imageDescription = R.string.meat_description,
+            chemicalSymbol = R.string.zinc_symbol,
+            description = R.string.zinc_description,
+            richSources = R.string.zinc_sources,
+            benefits = R.string.zinc_benefits,
         )
     )
 }
