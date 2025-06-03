@@ -9,17 +9,17 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
+import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
+import androidx.compose.foundation.lazy.staggeredgrid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -32,16 +32,18 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.ParagraphStyle
@@ -52,11 +54,12 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.window.core.layout.WindowWidthSizeClass
 import com.safire.vitaminsmineralscheatsheet.model.DataSource
 import com.safire.vitaminsmineralscheatsheet.model.MineralItem
 import com.safire.vitaminsmineralscheatsheet.model.Solubility
 import com.safire.vitaminsmineralscheatsheet.model.VitaminItem
-import com.safire.vitaminsmineralscheatsheet.model.VitaminMineralItem
+import com.safire.vitaminsmineralscheatsheet.model.MicronutrientItem
 import com.safire.vitaminsmineralscheatsheet.ui.theme.VitaminsMineralsCheatsheetTheme
 
 
@@ -78,12 +81,22 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun VitaminsMineralsApp(modifier: Modifier = Modifier) {
-    LazyColumn(
-        verticalArrangement = Arrangement.spacedBy(12.dp),
+
+    val numberOfColumns = when(currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass) {
+        WindowWidthSizeClass.COMPACT, WindowWidthSizeClass.MEDIUM -> 1
+        else -> 2
+    }
+
+
+    LazyVerticalStaggeredGrid (
+        columns = StaggeredGridCells.Fixed(numberOfColumns),
+        verticalItemSpacing = dimensionResource(R.dimen.large_padding),
+        horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.large_padding)),
+        contentPadding = PaddingValues(dimensionResource(R.dimen.medium_padding)),
         modifier = modifier
-            .padding(8.dp)
             .fillMaxHeight()
     ) {
+
         items(items = DataSource.data) {
             VitaminMineralCard(it)
         }
@@ -93,31 +106,37 @@ fun VitaminsMineralsApp(modifier: Modifier = Modifier) {
 
 @Composable
 fun VitaminMineralCard(
-    vitaminMineralItem: VitaminMineralItem,
+    vitaminMineralItem: MicronutrientItem,
     modifier: Modifier = Modifier
 
 ) {
-    var expanded by remember { mutableStateOf(false) }
-    val sources = stringResource(vitaminMineralItem.richSources).split("\n")
-    val benefits = stringResource(vitaminMineralItem.benefits).split("\n")
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val itemSources = stringResource(vitaminMineralItem.richSources).split("\n")
+    val itemBenefits = stringResource(vitaminMineralItem.benefits).split("\n")
 
     ElevatedCard(
         shape = CardDefaults.elevatedShape,
-        elevation = CardDefaults.elevatedCardElevation(defaultElevation = 4.dp),
+        elevation = CardDefaults.elevatedCardElevation(
+            defaultElevation = dimensionResource(R.dimen.small_padding)
+        ),
         modifier = modifier
             .fillMaxWidth()
             .clickable { expanded = !expanded }
     ) {
         Column(
-            verticalArrangement = Arrangement.spacedBy(4.dp),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.small_padding)),
             modifier = Modifier
-                .padding(start = 8.dp, end = 8.dp, top = 4.dp, bottom = 4.dp)
+                .padding(
+                    start = dimensionResource(R.dimen.medium_padding),
+                    end = dimensionResource(R.dimen.medium_padding),
+                    top = dimensionResource(R.dimen.small_padding),
+                    bottom = dimensionResource(R.dimen.small_padding))
                 .fillMaxWidth()
 
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.small_padding)),
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
@@ -126,7 +145,7 @@ fun VitaminMineralCard(
                     contentDescription = stringResource(vitaminMineralItem.imageDescription),
                     Modifier
                         .clip(CircleShape)
-                        .size(100.dp)
+                        .size(dimensionResource(R.dimen.image_size))
                 )
                 Column(
                 ) {
@@ -154,12 +173,12 @@ fun VitaminMineralCard(
                 }
 
             }
-            Text(stringResource(vitaminMineralItem.description))
+            Text(stringResource(vitaminMineralItem.itemDescription))
 
-            Spacer(modifier.size(4.dp))
+            Spacer(modifier.size(dimensionResource(R.dimen.small_padding)))
 
             if (expanded) {
-                AdditionalInfo(sources, modifier, benefits)
+                AdditionalInfo(itemSources, itemBenefits, modifier)
             }
 
             ExpandCollapseButton(
@@ -167,9 +186,9 @@ fun VitaminMineralCard(
                 text = if (!expanded) "See more" else "See less",
                 icon =
                     if (!expanded) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
-                contentDescription = when(expanded) {
-                    true -> stringResource(R.string.arrow_up)
-                    false -> stringResource(R.string.arrow_down)
+                contentDescription = when {
+                    expanded -> stringResource(R.string.arrow_up)
+                    else -> stringResource(R.string.arrow_down)
                 }, modifier = Modifier.fillMaxWidth()
             )
         }
@@ -179,8 +198,8 @@ fun VitaminMineralCard(
 @Composable
 private fun AdditionalInfo(
     sources: List<String>,
-    modifier: Modifier,
-    benefits: List<String>
+    benefits: List<String>,
+    modifier: Modifier
 ) {
     Text("Rich food sources:", fontWeight = FontWeight.SemiBold)
 
@@ -196,7 +215,7 @@ private fun AdditionalInfo(
             }
         }
     )
-    Spacer(modifier.size(4.dp))
+    Spacer(modifier.size(dimensionResource(R.dimen.small_padding)))
     Text(
         buildAnnotatedString {
             Text("Health Benefits:", fontWeight = FontWeight.SemiBold)
@@ -216,7 +235,7 @@ private fun VitaminSolubility(solubility: Solubility) {
     OutlinedCard(
     ) {
         Text(
-            modifier = Modifier.padding(8.dp),
+            modifier = Modifier.padding(dimensionResource(R.dimen.medium_padding)),
             text = when (solubility) {
                 Solubility.WATER_SOLUBLE -> "Water soluble"
                 Solubility.FAT_SOLUBLE -> "Fat soluble"
@@ -239,7 +258,7 @@ fun ExpandCollapseButton(
         modifier = modifier
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.small_padding)),
         ) {
             Icon(imageVector = icon, contentDescription = contentDescription)
             Text(text, fontWeight = FontWeight.SemiBold)
