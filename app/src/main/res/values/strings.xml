@@ -11,7 +11,7 @@
     <string name="vitamin_a_scientific_names">Retinol, Retinal, Retinoic acid, Carotenoids</string>
     <string name="vitamin_a_benefits">Keeps your eyes healthy.\nMaintains healthy skin.\nHelps your body fight infections.\nHelps with growth and reproduction.</string>
     <string name="vitamin_a_sources">orange, yellow or green coloured fruits and vegetables\ngreen leafy vegetables\nmargarine\ndairy products — milk and cheese\nliver\nmeat\nfish and fish oil</string>
-    <string name="vitamin_a_description"><![CDATA[Vitamin A is a fat-soluble vitamin that is stored in the liver.\nThere are two types of vitamin A that are found in the diet.\n-> Preformed vitamin A is found in animal products such as meat, fish, poultry, and dairy foods.\n-> Precursors to vitamin A, also known as provitamin A, are found in plant-based foods such as fruits and vegetables. The most common type of provitamin A is beta-carotene.\nVitamin A is also available in dietary supplements. It most often comes in the form of retinyl acetate or retinyl palmitate (preformed vitamin A), beta-carotene (provitamin A) or a combination of preformed and provitamin A.]]></string>
+    <string name="vitamin_a_description"><![CDATA[Vitamin A, being a fat-soluble vitamin, is stored in the liver.\nThere are two types of vitamin A that are found in the diet.\n-> Preformed vitamin A is found in animal products such as meat, fish, poultry, and dairy foods.\n-> Precursors to vitamin A, also known as provitamin A, are found in plant-based foods such as fruits and vegetables. The most common type of provitamin A is beta-carotene.\nVitamin A is also available in dietary supplements. It most often comes in the form of retinyl acetate or retinyl palmitate (preformed vitamin A), beta-carotene (provitamin A) or a combination of preformed and provitamin A.]]></string>
 
     <string name="seeds_description">Seeds illustration - AI generated</string>
     <string name="vitamin_b1_name">Vitamin B1</string>
@@ -22,7 +22,7 @@
 
     <string name="dairy_description">Diary products illustration</string>
     <string name="vitamin_b2_name">Vitamin B2</string>
-    <string name="vitamin_b2_description">Riboflavin is a type of B vitamin. It is water-soluble, which means it is not stored in the body. Water-soluble vitamins dissolve in water. Leftover amounts of the vitamin leave the body through the fluid body waste. The body keeps a small reserve of these vitamins. They have to be taken on a regular basis to maintain the reserve.\nRiboflavin (vitamin B2) works with the other B vitamins. It is important for body growth. It helps in red blood cell production. It also aids in the release of energy from proteins.</string>
+    <string name="vitamin_b2_description">Riboflavin is a type of B vitamin. Being a water-soluble vitamin, it has to be taken on a regular basis to maintain the reserve.\nRiboflavin (vitamin B2) works with the other B vitamins. It is important for body growth. It helps in red blood cell production. It also aids in the release of energy from proteins.</string>
     <string name="vitamin_b2_scientific_name">Riboflavin</string>
     <string name="vitamin_b2_sources">Dairy products\nEggs\nGreen leafy vegetables\nLean meats\nOrgan meats, such as liver and kidneys\nLegumes\nMilk\nNuts</string>
     <string name="vitamin_b2_benefits">Keeps your skin, eyes and nervous system healthy.\nHelps your body release energy from food.</string>
@@ -30,14 +30,14 @@
     <string name="mushroom_description">Red mushrooms</string>
     <string name="vitamin_b3_name">Vitamin B3</string>
     <string name="vitamin_b3_scientific_name">Niacin</string>
-    <string name="vitamin_b3_description">Niacin is a type of B vitamin. It is water-soluble, which means it is not stored in the body. Water-soluble vitamins dissolve in water. Leftover amounts of the vitamin leave the body through the fluid body waste. The body keeps a small reserve of these vitamins. They have to be taken on a regular basis to maintain the reserve.\nNiacin helps the digestive system, skin, and nerves to function. It is also important for changing food to energy.</string>
+    <string name="vitamin_b3_description">Niacin is a type of B vitamin.Niacin helps the digestive system, skin, and nerves to function. It is also important for changing food to energy.</string>
     <string name="vitamin_b3_benefits">Helps your body release energy from food.\nKeeps your nervous system and skin healthy.</string>
     <string name="vitamin_b3_sources">Milk\nEggs\nEnriched breads and cereals\nRice\nFish\nLean meats\nLegumes\nPeanuts\nPoultry</string>
 
     <string name="avocado_description">Smiley avocado illustration</string>
     <string name="vitamin_b5_name">Vitamin B5</string>
     <string name="vitamin_b5_scientific_name">Pantothenic acid</string>
-    <string name="vitamin_b5_description">Pantothenic acid (vitamin B5) is essential for the metabolism of food. It also plays a role in the production of hormones and cholesterol. Pantothenic acid is also a water-soluble vitamin.</string>
+    <string name="vitamin_b5_description">Pantothenic acid (vitamin B5) is essential for the metabolism of food. It also plays a role in the production of hormones and cholesterol. </string>
     <string name="vitamin_b5_benefits">Helps your body release energy from food.</string>
     <string name="vitamin_b5_sources">Animal proteins\nAvocado\nBroccoli, kale, and other vegetables in the cabbage family\nEggs\nLegumes and lentils\nMilk\nMushrooms\nOrgan meats\nPoultry\nWhite and sweet potatoes\nWhole-grain cereals\nYeast</string>
 
@@ -58,7 +58,7 @@
     <string name="broccoli_description">Broccoli illustration</string>
     <string name="vitamin_b9_name">Vitamin B9</string>
     <string name="vitamin_b9_scientific_name">Folate, Folic Acid</string>
-    <string name="vitamin_b9_description">Folic acid and folate are both terms for a type of B vitamin (vitamin B9).\nFolate is a B vitamin that occurs naturally in foods such as green leafy vegetables, citrus fruit, and beans.\nFolic acid is man-made (synthetic) folate. It is found in supplements and added to fortified foods.\nThe terms folic acid and folate are often used interchangeably.\nVitamin B9 is also water-soluble.</string>
+    <string name="vitamin_b9_description">Folic acid and folate are both terms for a type of B vitamin (vitamin B9).\nFolate is a B vitamin that occurs naturally in foods such as green leafy vegetables, citrus fruit, and beans.\nFolic acid is man-made (synthetic) folate. It is found in supplements and added to fortified foods.\nThe terms folic acid and folate are often used interchangeably.</string>
     <string name="vitamin_b9_benefits">Helps tissues grow and cells work\nWorks with vitamin B12 and vitamin C to help the body break down, use, and create new proteins\nHelps form red blood cells (helps prevent anemia)\nHelps produce DNA, the building block of the human body, which carries genetic information</string>
     <string name="vitamin_b9_sources">fortified breads and cereals\nliver\nlegumes — chickpeas and kidney beans\ngreen leafy vegetables\npeas\nbroccoli\nbrussels sprouts\nasparagus</string>
 
@@ -72,14 +72,14 @@
     <string name="lemons_description">Lemons with their leaf illustration</string>
     <string name="vitamin_c_name">Vitamin C</string>
     <string name="vitamin_c_scientific_name">Ascorbic acid</string>
-    <string name="vitamin_c_description">Vitamin C is a water-soluble vitamin. It is needed for normal growth and development.\nVitamin C is one of many antioxidants. Antioxidants are nutrients that block some of the damage caused by free radicals.\nFree radicals are made when your body breaks down food or when you are exposed to tobacco smoke or radiation.\nThe buildup of free radicals over time is largely responsible for the aging process.\nFree radicals may play a role in cancer, heart disease, and conditions like arthritis.\nThe body is not able to make vitamin C on its own. It does not store vitamin C. It is therefore important to include plenty of vitamin C-containing foods in your daily diet.\nAll fruits and vegetables contain some amount of vitamin C.</string>
+    <string name="vitamin_c_description">Vitamin C is needed for normal growth and development.\nIt is one of many antioxidants. Antioxidants are nutrients that block some of the damage caused by free radicals.\nFree radicals are made when your body breaks down food or when you are exposed to tobacco smoke or radiation.\nThe buildup of free radicals over time is largely responsible for the aging process.\nFree radicals may play a role in cancer, heart disease, and conditions like arthritis.\nThe body is not able to make vitamin C on its own. It does not store vitamin C. It is therefore important to include plenty of vitamin C-containing foods in your daily diet.\nAll fruits and vegetables contain some amount of vitamin C.</string>
     <string name="vitamin_c_benefits">Antioxidant.\nKeeps your skin, bones, blood vessels and connective tissue healthy.\nHelps with wound healing.\nBoosts your immune system.\nHelps your body absorb iron.</string>
     <string name="vitamin_c_sources">citrus fruits\nkiwi fruit\nstrawberries\ntomatoes\ncabbage\ncauliflower\nbrussels sprouts\ncapsicum\npotatoes</string>
 
     <string name="sun_description">Smiling sun illustration</string>
     <string name="vitamin_d_name">Vitamin D</string>
     <string name="vitamin_d_scientific_name">Calciferol, Ergocalciferol, Cholecalciferol</string>
-    <string name="vitamin_d_description">Vitamin D is a fat-soluble vitamin. Fat-soluble vitamins are stored in the body\'s fatty tissue and liver.\nVitamin D comes in 2 forms:\nVitamin D2 (ergocalciferol): comes from plant sources. \nVitamin D3 (cholecalciferol) is made in your skin when you are exposed to sunlight. It\'s also found in some animal foods and supplements.\nVitamin D helps the body absorb calcium. Calcium is a mineral that you must have for normal bone formation.\n\nIf you do not consume enough calcium in your diet, or if your body does not absorb enough calcium due to low vitamin D, bone production and bone tissues may suffer.\n\nVitamin D deficiency can lead to weakened bones (osteoporosis in adults or rickets in children).</string>
+    <string name="vitamin_d_description">Vitamin D comes in 2 forms:\nVitamin D2 (ergocalciferol): comes from plant sources. \nVitamin D3 (cholecalciferol) is made in your skin when you are exposed to sunlight. It\'s also found in some animal foods and supplements.\nVitamin D helps the body absorb calcium. Calcium is a mineral that you must have for normal bone formation.\n\nIf you do not consume enough calcium in your diet, or if your body does not absorb enough calcium due to low vitamin D, bone production and bone tissues may suffer.\n\nVitamin D deficiency can lead to weakened bones (osteoporosis in adults or rickets in children).</string>
     <string name="vitamin_d_benefits">Needed to use calcium.\nImportant for healthy bones, immune system, skin, muscles and brain.</string>
     <string name="vitamin_d_sources">vitamin D forms in the skin when it is exposed to the sun\nsalmon, mackerel, herring and sardines\negg yolks\nfortified milk and margarine</string>
 
@@ -137,5 +137,6 @@
     <string name="zinc_description">Zinc is an important mineral involved in various bodily functions – growth and development as well as immune function.\nZinc also helps to produce the active form of vitamin A and transports it around the body.\nZinc is naturally found in cells throughout the body. It helps the cells to grow and divide, and is necessary for the activity of enzymes, proteins, and DNA (your genes). The body cannot make zinc, so you need to get it from the food you eat. It is mainly stored in the muscle and bone.\n\nZinc is important for many of the body\'s functions:\n\nImmune system: The body needs zinc to fight off infection. People who don\'t have enough zinc in their body may be at greater risk of infections. Children and older people are at greater risk.\nWound healing: Zinc supports skin health. If you don\'t have enough zinc in your diet, it can lead to skin changes that can look like eczema at first. Zinc supplements may be used to help people who have burns or leg ulcers that heal very slowly or don\'t heal.\nTaste and smell: Zinc is very important for one of the enzymes you need so that you are able to taste and smell.\n\nHaving enough zinc is especially important during pregnancy, and for children to ensure they grow and develop properly.</string>
     <string name="zinc_sources">meat\nfish\nshellfish\npoultry\ncereals\ndairy foods\nbread\ncereals</string>
     <string name="zinc_benefits">\t\nwound healing\nmaking new cells and enzymes\nprocessing carbohydrate, fat and protein in food</string>
+    <string name="solubility"><![CDATA[Vitamins are grouped into two categories:\n\n-> Fat-soluble vitamins are stored in the body\'s liver, fatty tissue, and muscles. The four fat-soluble vitamins are vitamins A, D, E, and K. These vitamins are absorbed more easily by the body in the presence of dietary fat.\n-> Water-soluble vitamins are not stored in the body. The nine water-soluble vitamins are vitamin C and all the B vitamins. Any leftover or excess amounts of these leave the body through the urine. They have to be consumed on a regular basis to prevent shortages or deficiencies in the body. The exception to this is vitamin B12, which can be stored in the liver for many years.]]></string>
 
 </resources>
