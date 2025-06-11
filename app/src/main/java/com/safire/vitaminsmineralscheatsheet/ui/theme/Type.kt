@@ -17,11 +17,10 @@ val Typography = Typography(
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),
-    titleMedium =
+    headlineMedium =
         TextStyle(
         fontFamily = FontFamily(Font(R.font.tagesschrift_regular,FontWeight.Medium)),
         fontWeight = FontWeight.Medium,
-        lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
     labelSmall = TextStyle(

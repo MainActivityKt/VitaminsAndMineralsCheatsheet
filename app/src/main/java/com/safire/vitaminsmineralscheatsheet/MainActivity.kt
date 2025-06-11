@@ -14,7 +14,6 @@ import com.safire.vitaminsmineralscheatsheet.ui.VitaminsMineralsApp
 import com.safire.vitaminsmineralscheatsheet.ui.theme.VitaminsMineralsCheatsheetTheme
 
 
-const val BULLET = "\u2022"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

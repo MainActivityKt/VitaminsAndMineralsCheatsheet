@@ -138,5 +138,9 @@
     <string name="zinc_sources">meat\nfish\nshellfish\npoultry\ncereals\ndairy foods\nbread\ncereals</string>
     <string name="zinc_benefits">\t\nwound healing\nmaking new cells and enzymes\nprocessing carbohydrate, fat and protein in food</string>
     <string name="solubility"><![CDATA[Vitamins are grouped into two categories:\n\n-> Fat-soluble vitamins are stored in the body\'s liver, fatty tissue, and muscles. The four fat-soluble vitamins are vitamins A, D, E, and K. These vitamins are absorbed more easily by the body in the presence of dietary fat.\n-> Water-soluble vitamins are not stored in the body. The nine water-soluble vitamins are vitamin C and all the B vitamins. Any leftover or excess amounts of these leave the body through the urine. They have to be consumed on a regular basis to prevent shortages or deficiencies in the body. The exception to this is vitamin B12, which can be stored in the liver for many years.]]></string>
+    <string name="water_soluble">Water soluble</string>
+    <string name="fat_soluble">Fat soluble</string>
+    <string name="water_solubility">are not stored in the body. The nine water-soluble vitamins are vitamin C and all the B vitamins. Any leftover or excess amounts of these leave the body through the urine. They have to be consumed on a regular basis to prevent shortages or deficiencies in the body. The exception to this is vitamin B12, which can be stored in the liver for many years.</string>
+    <string name="fat_solubility">are stored in the body\'s liver, fatty tissue, and muscles. The four fat-soluble vitamins are vitamins A, D, E, and K. These vitamins are absorbed more easily by the body in the presence of dietary fat.</string>
 
 </resources>

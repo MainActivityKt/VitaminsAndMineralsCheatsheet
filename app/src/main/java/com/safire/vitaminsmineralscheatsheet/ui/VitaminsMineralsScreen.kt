@@ -57,7 +57,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.window.core.layout.WindowWidthSizeClass
-import com.safire.vitaminsmineralscheatsheet.BULLET
 import com.safire.vitaminsmineralscheatsheet.R
 import com.safire.vitaminsmineralscheatsheet.model.DataSource
 import com.safire.vitaminsmineralscheatsheet.model.MicronutrientItem
@@ -65,25 +64,27 @@ import com.safire.vitaminsmineralscheatsheet.model.MineralItem
 import com.safire.vitaminsmineralscheatsheet.model.Solubility
 import com.safire.vitaminsmineralscheatsheet.model.VitaminItem
 
+val bulletedParagraphStyle = ParagraphStyle(textIndent = TextIndent(restLine = 12.sp))
+
 @Composable
 fun VitaminsMineralsApp(padding: PaddingValues = PaddingValues(dimensionResource(R.dimen.small_padding))) {
 
 
-    //Chooses either one or two columns for the screen based on its width
-    val numberOfColumns = when(currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass) {
+    // Chooses either one or two columns for the screen based on its width
+    val numberOfColumns = when (currentWindowAdaptiveInfo().windowSizeClass.windowWidthSizeClass) {
         WindowWidthSizeClass.COMPACT, WindowWidthSizeClass.MEDIUM -> 1
         else -> 2
     }
 
-    //
+    // Stores the state for solubility dialog being open or closed.
+    // When solubility is clicked, its state changes to true and it's displayed on the screen
     val openDialog = rememberSaveable { mutableStateOf(false) }
-
     if (openDialog.value) {
         SolubilityDialog(onDismiss = { openDialog.value = false })
     }
 
-
-    LazyVerticalStaggeredGrid (
+    // Creates a lazy column of {numberOfColumns} width for displaying the vitamin and mineral items
+    LazyVerticalStaggeredGrid(
         columns = StaggeredGridCells.Fixed(numberOfColumns),
         verticalItemSpacing = dimensionResource(R.dimen.medium_padding),
         horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.large_padding)),
@@ -94,7 +95,10 @@ fun VitaminsMineralsApp(padding: PaddingValues = PaddingValues(dimensionResource
     ) {
 
         items(items = DataSource.data) {
-            VitaminMineralCard(it, onSolubilityClick = { openDialog.value = !openDialog.value })
+            VitaminMineralCard(
+                vitaminMineralItem = it,
+                onSolubilityClick = { openDialog.value = !openDialog.value }
+            )
         }
     }
 }
@@ -107,10 +111,15 @@ fun VitaminMineralCard(
     modifier: Modifier = Modifier
 
 ) {
+    // Stores the state of any vitamin mineral item being expanded or collapsed. Each click on the
+    // item changes its state
     var expanded by rememberSaveable { mutableStateOf(false) }
+    // Stores the rich resources of a vitamin or mineral in a list of String
     val itemSources = stringResource(vitaminMineralItem.richSources).split("\n")
+    // Stores the health benefits of a vitamin or mineral in a list of String
     val itemBenefits = stringResource(vitaminMineralItem.benefits).split("\n")
 
+    // The actual vitamin/mineral item UI
     ElevatedCard(
         shape = CardDefaults.elevatedShape,
         elevation = CardDefaults.elevatedCardElevation(
@@ -138,7 +147,7 @@ fun VitaminMineralCard(
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
-                Image(
+                Image( // Displaying the image of that vitamin or mineral
                     painter = painterResource(vitaminMineralItem.image),
                     contentDescription = stringResource(vitaminMineralItem.imageDescription),
                     Modifier
@@ -149,36 +158,41 @@ fun VitaminMineralCard(
                 ) {
                     Text(
                         text = stringResource(
+                            // Displays the scientific name of a vitamin, or the symbol of an item, based on what it is
                             if (vitaminMineralItem is VitaminItem) {
                                 vitaminMineralItem.scientificNames
                             } else {
                                 (vitaminMineralItem as MineralItem).chemicalSymbol
                             }
                         ),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.headlineMedium,
                         fontSize = 17.sp,
                         lineHeight = 18.sp,
                         color = if (isSystemInDarkTheme()) Color.LightGray else Color.DarkGray
                     )
-                    Text(
+                    Text( //  Displays the name of given vitamin or mineral
                         text = stringResource(vitaminMineralItem.name),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.headlineMedium,
                         fontSize = 26.sp
                     )
+                    // If the given item is a vitamin, display its solubility
                     if (vitaminMineralItem is VitaminItem) {
                         VitaminSolubility(vitaminMineralItem.solubility, onSolubilityClick)
                     }
                 }
 
             }
+            // Text description of given vitamin or mineral
             Text(stringResource(vitaminMineralItem.itemDescription))
-
+            // A bit of spacing
             Spacer(modifier.size(dimensionResource(R.dimen.small_padding)))
-
+            // If the item is expanded, displays additional info (health benefits + rich resources)
             if (expanded) {
                 AdditionalInfo(itemSources, itemBenefits, modifier)
             }
 
+            // Displays the button to expand or collapse an item. The button text and icon are based
+            // on the {expanded} state's value, and clicking always changes state's value to its opposite
             ExpandCollapseButton(
                 onClick = { expanded = !expanded },
                 text = if (!expanded) "See more" else "See less",
@@ -193,58 +207,73 @@ fun VitaminMineralCard(
     }
 }
 
+// Displaying the additional info (expanding the vitamin mineral item)
 @Composable
 private fun AdditionalInfo(
     sources: List<String>,
     benefits: List<String>,
     modifier: Modifier
 ) {
-    Text("Rich food sources:", fontWeight = FontWeight.SemiBold)
+    buildAnnotatedString {
+        Text(
+            "Rich food sources:",
+            style = MaterialTheme.typography.titleMedium,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.SemiBold
+        )
+        BulletedListText(sources, Modifier)
+    }
 
-    val paragraphStyle = ParagraphStyle(textIndent = TextIndent(restLine = 12.sp))
-    Text(
-        buildAnnotatedString {
-            sources.forEach {
-                withStyle(style = paragraphStyle) {
-                    append(BULLET)
-                    append("\t\t")
-                    append(it)
-                }
-            }
-        }
-    )
     Spacer(modifier.size(dimensionResource(R.dimen.small_padding)))
     Text(
         buildAnnotatedString {
-            Text("Health Benefits:", fontWeight = FontWeight.SemiBold)
-            benefits.forEach {
-                withStyle(style = paragraphStyle) {
-                    append(BULLET)
-                    append("\t\t")
-                    append(it)
-                }
-            }
+            Text(
+                "Health Benefits:",
+                style = MaterialTheme.typography.titleMedium,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.SemiBold
+            )
+            BulletedListText(benefits, Modifier)
         }
     )
 }
 
+// A composable for displaying a list of string items in a bulleted list style
+@Composable
+fun BulletedListText(items: List<String>, modifier: Modifier = Modifier) {
+    Text(buildAnnotatedString {
+        items.forEach {
+            withStyle(style = bulletedParagraphStyle) {
+                append(Typography.bullet)
+                append("\t\t")
+                append(it)
+            }
+        }
+    }, modifier)
+}
+
+// Displaying the solubility of a vitamin item and handling the click event with state-hoisting
 @Composable
 private fun VitaminSolubility(solubility: Solubility, onClick: () -> Unit) {
     OutlinedCard(
-        modifier = Modifier.clickable { onClick() }
+        modifier = Modifier
+            .clickable { onClick() }
+
     ) {
+        // Displays the solubility text based on a vitamin item being water-soluble or ast-soluble
         Text(
-            modifier = Modifier.padding(dimensionResource(R.dimen.medium_padding)),
+            modifier = Modifier
+                .padding(dimensionResource(R.dimen.medium_padding)),
             text = when (solubility) {
-                Solubility.WATER_SOLUBLE -> "Water soluble"
-                Solubility.FAT_SOLUBLE -> "Fat soluble"
+                Solubility.WATER_SOLUBLE -> stringResource(R.string.water_soluble)
+                Solubility.FAT_SOLUBLE -> stringResource(R.string.fat_soluble)
             },
             fontWeight = FontWeight.W500,
-
         )
     }
 }
 
+// Displaying the expand/collapse button and a row of text and icon based on the passed arguments
 @Composable
 fun ExpandCollapseButton(
     onClick: () -> Unit,
@@ -266,6 +295,7 @@ fun ExpandCollapseButton(
     }
 }
 
+// Top app bar displaying hte app icon with its name
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBar(modifier: Modifier = Modifier) {
@@ -279,59 +309,60 @@ fun TopBar(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.titleMedium,
                 fontSize = 28.sp
             )
-
-        },
-
-        navigationIcon = {
+        }, navigationIcon = {
             Image(painterResource(R.drawable.ic_launcher_foreground), contentDescription = null)
         },
         scrollBehavior = scrollBehavior
     )
 }
 
+// Displaying the solubility dialog upon clicking the solubility item, managing the onDismiss
+// event with state-hoisting
 @Composable
 fun SolubilityDialog(
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Dialog (
+    Dialog(
         onDismissRequest = onDismiss,
         properties = DialogProperties(dismissOnClickOutside = true)
     ) {
-        Card (
-            shape = RoundedCornerShape(16.dp),
-            modifier = modifier
-        ) {
+        Card(shape = RoundedCornerShape(16.dp)) {
             Text(
                 buildAnnotatedString {
-                    withStyle(
-                        style = ParagraphStyle(
-                            textAlign = TextAlign.Center,)) {
-                        withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, fontSize = 24.sp)) {
-                            append("Vitamins are grouped into two categories\n")
-                        }
-                    }
+                    Text(
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 24.sp,
+                        text = "Vitamins are grouped into two categories",
+                        modifier = Modifier.padding(dimensionResource(R.dimen.large_padding)),
+                    )
 
-                    withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                    withStyle(
+                        style = SpanStyle(
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 18.sp
+                        )
+                    ) {
                         append("-> Fat-soluble vitamins: ")
                     }
-                    append("are stored in the body's liver, fatty tissue, and muscles. The four" +
-                            " fat-soluble vitamins are vitamins A, D, E, and K. These vitamins are " +
-                            "absorbed more easily by the body in the presence of dietary fat.\n\n")
+                    append(stringResource(R.string.fat_solubility))
 
-                    withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
+                    append("\n\n") // equivalent to a spacer, in this case
+
+                    withStyle(
+                        style = SpanStyle(
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 18.sp
+                        )
+                    ) {
                         append("-> Water-soluble vitamins: ")
                     }
-                    append("are not stored in the body. The nine water-soluble vitamins are" +
-                            " vitamin C and all the B vitamins. Any leftover or excess amounts of " +
-                            "these leave the body through the urine. They have to be consumed on a " +
-                            "regular basis to prevent shortages or deficiencies in the body. " +
-                            "The exception to this is vitamin B12, which can be stored in the " +
-                            "liver for many years.")
+                    append(stringResource(R.string.water_solubility))
                 },
                 modifier = Modifier.padding(dimensionResource(R.dimen.large_padding))
-
             )
+
         }
     }
 }
