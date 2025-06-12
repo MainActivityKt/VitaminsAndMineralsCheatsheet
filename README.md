@@ -1,6 +1,6 @@
 # Vitamins & Minerals Cheatsheet
 
-Vitamins and Minerals is a simple yet useful, aesthetic design yet beautiful app for
+Vitamins and Minerals is a simple yet useful, aesthetic design and beautiful app for
 learning more about vitamins and minerals and having these information always in-hand on
 your phone.
 
