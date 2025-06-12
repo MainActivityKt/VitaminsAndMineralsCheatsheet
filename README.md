@@ -21,9 +21,11 @@ is established in the code through class inheritance.
 ## Screenshots:
 
 **Portrait mode (Light theme):**
+
 <img src="screenshots/portrait.png" alt="app screen" width="350"/>
 
 **Portrait mode (Dark theme):**
+
 <img src="screenshots/portrait dark theme.png" alt="app screen" width="350"/>
 
 **Landscape mode/tablets:**
