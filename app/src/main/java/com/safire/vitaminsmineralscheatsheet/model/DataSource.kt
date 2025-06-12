@@ -41,6 +41,15 @@ object DataSource {
             benefits = R.string.vitamin_b3_benefits,
             solubility = Solubility.WATER_SOLUBLE
         ), VitaminItem(
+            image = R.drawable.avocado,
+            name = R.string.vitamin_b5_name,
+            imageDescription = R.string.avocado_description,
+            scientificNames = R.string.vitamin_b5_scientific_name,
+            itemDescription = R.string.vitamin_b5_description,
+            richSources = R.string.vitamin_b5_sources,
+            benefits = R.string.vitamin_b5_benefits,
+            solubility = Solubility.WATER_SOLUBLE
+        ), VitaminItem(
             image = R.drawable.banana,
             name = R.string.vitamin_b6_name,
             imageDescription = R.string.banana_description,
@@ -112,7 +121,7 @@ object DataSource {
             richSources = R.string.vitamin_k_sources,
             benefits = R.string.vitamin_k_benefits,
             solubility = Solubility.FAT_SOLUBLE
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.cheese,
             name = R.string.calcium_name,
             imageDescription = R.string.cheese_description,
@@ -120,7 +129,7 @@ object DataSource {
             itemDescription = R.string.calcium_description,
             richSources = R.string.calcium_sources,
             benefits = R.string.calcium_benefits,
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.salt_shaker,
             name = R.string.iodine_name,
             imageDescription = R.string.salt_shaker_description,
@@ -128,7 +137,7 @@ object DataSource {
             itemDescription = R.string.iodine_description,
             richSources = R.string.iodine_sources,
             benefits = R.string.iodine_benefits,
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.beans,
             name = R.string.iron_name,
             imageDescription = R.string.beans_description,
@@ -136,7 +145,7 @@ object DataSource {
             itemDescription = R.string.iron_description,
             richSources = R.string.iron_sources,
             benefits = R.string.iron_benefits,
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.spinach,
             name = R.string.magnesium_name,
             imageDescription = R.string.spinach_description,
@@ -144,7 +153,7 @@ object DataSource {
             itemDescription = R.string.magnesium_description,
             richSources = R.string.magnesium_sources,
             benefits = R.string.magnesium_benefits,
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.tomato,
             name = R.string.potassium_name,
             imageDescription = R.string.tomato_description,
@@ -152,7 +161,7 @@ object DataSource {
             itemDescription = R.string.potassium_description,
             richSources = R.string.potassium_sources,
             benefits = R.string.potassium_benefits,
-        ), MineralItem (
+        ), MineralItem(
             image = R.drawable.meat,
             name = R.string.zinc_name,
             imageDescription = R.string.meat_description,
