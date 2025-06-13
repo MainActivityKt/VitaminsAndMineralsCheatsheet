@@ -99,7 +99,7 @@ Note: At the moment, the app can be installed on Android phones only.
 - Avocado (Vitamin B5) ➡
   Image by <a href="https://pixabay.com/users/graphicssc-1426978/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3059616">GraphicsSC</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3059616">Pixabay</a>
 - Banana fruit yellow (Vitamin B6) ➡ Image by <a href="https://pixabay.com/users/julieta_masc-5768105/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2850841">Julieta Mascarella</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2850841">Pixabay</a>
-- Egg smiling happy (Vitamin B7) & Broccoli bunch head (Vitamin B9) ➡
+- Egg smiling happy (Vitamin B7), Broccoli bunch head (Vitamin B9), Salt shaker (Iodine) ➡
   Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24404">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=24404">Pixabay</a>
 - Meat(Vitamin B12 & Zinc) ➡
   Image by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=575806">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=575806">Pixabay</a>
@@ -113,11 +113,9 @@ Note: At the moment, the app can be installed on Android phones only.
   Image by <a href="https://pixabay.com/users/barelydevi-14723734/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7545986">Devi J</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7545986">Pixabay</a>
 - Cheese (Calcium) ➡
   Image by <a href="https://pixabay.com/users/ideativas-tlm-19346105/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6600573">Raquel Candia</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=6600573">Pixabay</a>
-- Salt shaker (Iodine) ➡
-  Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46573">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=46573">Pixabay</a>
 - Bean (Iron) ➡
   Image by <a href="https://pixabay.com/users/deeznutz1-3086161/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8147491">Dee</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8147491">Pixabay</a>
 - Spinach (Magnesium) ➡
   Image by <a href="https://pixabay.com/users/julytre-30611248/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8979168">July Salomena Trujillo Reyes</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8979168">Pixabay</a>
-- Tomato(Potassium) ➡
+- Tomato (Potassium) ➡
   Image by <a href="https://pixabay.com/users/userold-17434792/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5409239">Inactive</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5409239">Pixabay</a>
