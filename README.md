@@ -84,6 +84,10 @@ Note: At the moment, the app can be installed on Android phones only.
 
 UX testing performed by me and [Chinaza Blossom](https://github.com/Chinazablossom)
 
+### Typography
+
+- [Tagesschrift Regular, Google fonts](https://fonts.google.com/specimen/Tagesschrift)
+
 ### Drawables (images, illustrations, icons):
 
 - Strawberry (App icon) ➡
