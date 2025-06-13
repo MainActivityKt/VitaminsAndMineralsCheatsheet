@@ -82,7 +82,7 @@ Note: At the moment, the app can be installed on Android phones only.
 
 ### UX Testing
 
-UX testing performed by me and [Chinaza Blossom](https://github.com/Chinazablossom)
+- UX testing performed by me and [Chinaza Blossom](https://github.com/Chinazablossom)
 
 ### Typography
 
