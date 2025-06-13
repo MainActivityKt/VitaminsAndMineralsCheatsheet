@@ -80,11 +80,11 @@ Note: At the moment, the app can be installed on Android phones only.
 - The Better Health chanel ➡ [Vitamins and minerals](https://www.betterhealth.vic.gov.au/health/healthyliving/Vitamins-and-minerals)
 - Healthdirect Australia ➡ [Vitamins and minerals explained](https://www.healthdirect.gov.au/vitamins-and-minerals-explained)
 
-### UX Testing
+### UX Testing:
 
 - UX testing performed by me and [Chinaza Blossom](https://github.com/Chinazablossom)
 
-### Typography
+### Typography:
 
 - [Tagesschrift Regular, Google fonts](https://fonts.google.com/specimen/Tagesschrift)
 
